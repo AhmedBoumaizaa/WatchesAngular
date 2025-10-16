@@ -26,6 +26,18 @@
             <label>Date Création</label>
             <input type="date" [(ngModel)]="newProduit.dateCreation" name="dateCreation" class="form-control">
         </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Quantities</label>
+        <select class="form-control form-control-lg" id="idmodel" name="idmodel"
+        [(ngModel)]="newidmodel">
+        @for(cat of Quantities; track cat.idmodel){
+        <option [value]="cat.idmodel"> {{cat.nbquantity}} </option>
+        }
+        </select>
+        </div>
+
+
         <div class="mt-2">
             <button type="submit" (click)="addProduit()" class="btn btn-success">Ajouter</button>
 

@@ -75,10 +75,10 @@ export class ProduitService {
     }
   }
 
-  listeCategories():Quantity[] {
+  listeQuantity():Quantity[] {
   return this.quantity;
   }
-  consulterCategorie(id:number): Quantity{
+  consulterQuantity(id:number): Quantity{
     return this.quantity.find(cat => cat.idmodel == id)!;
 }
 
